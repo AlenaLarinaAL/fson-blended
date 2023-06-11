@@ -3,15 +3,18 @@ import { StatisticsList, StatisticTitle } from './Statistics.styled';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { MdPeople, MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { GiTreeDoor } from 'react-icons/gi';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 
 const icons = {
   1: FaRegThumbsUp,
   2: MdPeople,
   3: MdOutlineProductionQuantityLimits,
   4: GiTreeDoor,
+  default: AiOutlineInfoCircle,
 };
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = props => {
+  const { title, stats } = props;
   return (
     <>
       <StatisticTitle>{title}</StatisticTitle>
@@ -22,7 +25,7 @@ export const Statistics = ({ title, stats }) => {
             key={item.id}
             total={item.total}
             title={item.title}
-            Icon={icons[item.id]}
+            icon={icons[item.id] ?? icons.default}
           />
         ))}
       </StatisticsList>

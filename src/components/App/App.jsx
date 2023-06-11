@@ -1,30 +1,33 @@
-import article from 'data/article.json';
-import data from 'data/data.json';
+// import article from 'data/article.json';
+// import data from 'data/data.json';
 import {
-  BlogCard,
-  Container,
+  // BlogCard,
+  // Container,
   Section,
-  Heading,
-  Statistics,
-  ForbesList,
-  CryptoHistory,
+  // Heading,
+  // Statistics,
+  // ForbesList,
+  // CryptoHistory,
 } from 'components';
+import Phonebook from 'components/Phonebook/Phonebook';
+
+// const { poster, tag, title, description, name, avatar, postedAt } = article;
 
 export const App = () => {
   return (
     <Section>
-      <Container>
+      {/* <Container>
         <Heading marginBottom="50px" textAlign="center">
           Task 1
         </Heading>
         <BlogCard
-          name={article.name}
-          postedAt={article.postedAt}
-          poster={article.poster}
-          tag={article.tag}
-          title={article.title}
-          description={article.description}
-          avatar={article.avatar}
+          name={name}
+          postedAt={postedAt}
+          poster={poster}
+          tag={tag}
+          title={title}
+          description={description}
+          avatar={avatar}
         />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
@@ -40,8 +43,9 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        {/* <CryptoHistory /> */}
-      </Container>
+        <CryptoHistory />
+      </Container> */}
+      <Phonebook />
     </Section>
   );
 };

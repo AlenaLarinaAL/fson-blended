@@ -4,10 +4,10 @@ import {
   StatisticCounter,
 } from './StatisticItem.styled';
 
-export const StatisticItem = ({ total, title, Icon }) => {
+export const StatisticItem = ({ total, title, icon: SomeIcon }) => {
   return (
     <StatisticBox>
-      <Icon />
+      <SomeIcon size={30} color={'#2196F3'} />
       <StatisticCounter>{total}</StatisticCounter>
       <StatisticText>{title}</StatisticText>
     </StatisticBox>
